@@ -7,8 +7,8 @@ A simple boiler plate for Mongo-Express-Angular-Node (Gulp - Webpack for ease!)
 
 ## Getting Started
 
+install mongodb (if not already) https://www.mongodb.com/download-center?jmp=nav#community
 ```
-$ install mongodb (if not already) https://www.mongodb.com/download-center?jmp=nav#community
 $ mkdir my-project 
 $ git clone https://github.com/fDotUse/boiler-mean my-project
 $ cd my-project
