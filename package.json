@@ -1,0 +1,78 @@
+{
+  "name": "boiler-mean",
+  "version": "1.0.0",
+  "description": "A boilerplate for the MEAN stack",
+  "engines": {
+    "node": ">=4.4.4"
+  },
+  "main": "server/app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fDotUse/boiler-mean.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "angular",
+    "mean",
+    "node",
+    "express",
+    "js",
+    "javascriptmongo",
+    "mongoose",
+    "mongodb"
+  ],
+  "author": "Sergio Martin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fDotUse/boiler-mean/issues"
+  },
+  "homepage": "https://github.com/fDotUse/boiler-mean#readme",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-aria": "^1.5.5",
+    "angular-cookies": "^1.5.5",
+    "angular-messages": "^1.5.5",
+    "angular-ui-bootstrap": "^1.3.2",
+    "angular-ui-router": "^0.3.0",
+    "babel-loader": "^5.3.2",
+    "bcrypt": "^0.8.5",
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.3.4",
+    "body-parser": "^1.15.0",
+    "bootstrap": "^3.3.6",
+    "cookie-parser": "^1.4.1",
+    "css-loader": "^0.15.4",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "file-loader": "^0.8.4",
+    "font-awesome": "^4.6.1",
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-template": "^4.0.0",
+    "gulp-todoist": "0.0.2",
+    "jquery": "^2.2.3",
+    "mocha": "^2.4.5",
+    "moment": "^2.12.0",
+    "mongoose": "^4.4.11",
+    "morgan": "^1.7.0",
+    "ng-annotate-loader": "^0.1.0",
+    "ng-infinite-scroll": "^1.2.1",
+    "node-libs-browser": "^0.5.2",
+    "node-uuid": "^1.4.7",
+    "nodemon": "^1.9.1",
+    "normalize.css": "^4.0.0",
+    "raw-loader": "^0.5.1",
+    "run-sequence": "^1.1.1",
+    "style-loader": "^0.12.3",
+    "stylus-loader": "^1.2.1",
+    "toastr": "^2.1.2",
+    "webpack": "^1.10.1",
+    "webpack-stream": "^2.0.0"
+  },
+  "scripts": {
+    "start": "gulp"
+  }
+}
