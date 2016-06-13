@@ -1,55 +1,48 @@
-'use strict';
-
 //css dependencies, thanks the the styles webpack loader it gets added as a
 // <style> tag in the head by default but can be changed
-require('normalize.css/normalize.css');
-require('bootstrap/dist/css/bootstrap.min.css');
-require('toastr/build/toastr.min.css');
-require('./assets/styles/main.css');
+import 'normalize.css/normalize.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'toastr/build/toastr.min.css';
+import './assets/styles/main.css';
 
 //importing libraries for global use
-window.$ = window.jQuery = require('jquery');
-require('bootstrap');
-window.toastr = require('toastr');
-window.moment = require('moment');
+import 'bootstrap';
 
 // importing angular dependencies for injection
-const angular = require ('angular');
-const uiRouter = require ('angular-ui-router');
-const ngAnimate = require ('angular-animate');
-const ngMessages = require('angular-messages');
-const ngCookies = require('angular-cookies');
-const uiBootstrap = require('angular-ui-bootstrap');
+import angular from 'angular';
+import uiRouter from 'angular-ui-router';
+import ngAnimate from 'angular-animate';
+import ngMessages from 'angular-messages';
+import ngCookies from 'angular-cookies';
+import uiBootstrap from 'angular-ui-bootstrap';
 
-window.app = angular.module('boiler-mean', [
+// Project files
+import {MainModule} from './components/main/main.module';
+import {CommonModule} from './common/common.module';
+
+angular.module('boiler-mean', [
   'ui.router',
   'ngAnimate',
   'ngMessages',
   'ngCookies',
   'ui.bootstrap',
+
+  // Modules
+  MainModule.name,
+  CommonModule.name
 ])
 
-app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/');
     $stateProvider
-  //Main
+    //Main
     .state('main', {
       url: '/',
       template: require('./components/main/main.tmpl.html'),
-      controller: 'MainCtrl',
+      controller: 'MainController as mainCtrl',
       params:{userId:null}
-    })
+    });
 
-    
-})
-
-//require common resources models & factories
-require('./common/services');
-require('./common/models');
-
-//require component controllers
-require('./components/main');
-
-
+});

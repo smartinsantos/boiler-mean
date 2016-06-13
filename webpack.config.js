@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 /*
 config for webpack. Will be used in
 the Gulpfile for building our app.
@@ -19,4 +21,13 @@ module.exports = {
       { test: /\.js$/, loaders: ['ng-annotate','babel?stage=1'], exclude: [/client\/lib/, /node_modules/, /\.spec\.js/] }
     ]
   },
+
+  plugins: [
+      new webpack.ProvidePlugin({
+          $: 'jquery',
+          jQuery: 'jquery',
+          moment: 'moment',
+          toastr: 'toastr'
+      })
+  ]
 };

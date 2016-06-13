@@ -1,6 +1,22 @@
-app.controller('MainCtrl', ['$scope','$http','$state','$cookieStore', function($scope,$http,$state,$cookieStore,Auth,User) {
-  console.log('MainCtrl Loaded...')
+MainController.$inject = ['$scope', '$state', 'ExampleService'];
+export {MainController};
 
-  $scope.message = 'HELLO WORLD!'
-  
-}]);
+function MainController($scope, $state, ExampleService) {
+    const vm = this;
+
+    // State
+    vm.message = 'HELLO WORLD!';
+
+    // Method
+    vm.useServiceMessage = useServiceMessage;
+
+    function useServiceMessage() {
+        if (vm.message === 'HELLO WORLD!') {
+            vm.message = ExampleService.getMessage();
+        } else {
+            vm.message = 'HELLO WORLD!';
+        }
+    }
+}
+
+
